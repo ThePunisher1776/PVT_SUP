@@ -1,4 +1,4 @@
-WEBSITE_LIST = {"https://www.youtube.com/":
+WEBSITE_LIST = [{"https://www.youtube.com/":
                 {"specifics":"ablock=true;",
                  "main_menu":'refresh_sens:id;guide-icon',
                  "endpoints":
@@ -24,4 +24,22 @@ WEBSITE_LIST = {"https://www.youtube.com/":
                       },
                   }
                  }
-                }
+                }, 
+                {"https://ladbible.com":
+                {"specifics":"ablock=true;",
+                 "main_menu":'refresh_sens:partial link text;Categories',
+                 "endpoints":
+                 { 
+                  "news":'id;HeaderLink-news',
+                  "entertainment": 'id;HeaderLink-entertainment'
+                 },
+                  "sub-endpoints":
+                  {
+                      "categories":{"news":'relies_prev:partial link text;News',
+                                    "entertainment":'relies_prev:partial link text;Entertainment',
+                                    "lad_originals":'relies_prev:partial link text;LAD Originals'
+                                    },
+                      "lad_originals":{"article":"rand_ind:css selector;contentWrapper"}
+                  }
+                 }
+                }]
