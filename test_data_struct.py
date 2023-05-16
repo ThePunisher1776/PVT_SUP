@@ -161,7 +161,7 @@ def test_ss_list(website_url:str, ss_list:list, driver):
     for csss in ss_list:
         type_find, css = str(csss).split(";")
         #special = None
-        special_list = [None]
+        special_list = [1]
         done_special = False
         try:
             special, type_find = type_find.split(":")
@@ -172,11 +172,11 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         count+=1
         #input()
         print(type_find)
-        if special: # specific indexed result
+        if special_list: # specific indexed result
             if "refresh_sens" in special_list:
                 refresh_mem.append((type_find, css))
             #if special[:3] == "ind_":
-            if any("ind_" in string for string in special_list):
+            if "ind_" in special_list:
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
@@ -222,10 +222,10 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
-    #c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.youtube.com/"
-    seleniumsselector_list = ["rand_ind:css selector;ytd-rich-item-renderer"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    c_driver = create_chrome_driver(ublock=True, headless=False)
+    website_to_test = "https://www.ladbible.com"
+    seleniumsselector_list = ["refresh_sens:partial link text;Categories","relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
-    #test_ss_list(website_to_test, seleniumsselector_list, c_driver)
-    test_struct("https://www.youtube.com/")
+    test_ss_list(website_to_test, seleniumsselector_list, c_driver)
+    #test_struct("https://ladbible.com")
     pass
