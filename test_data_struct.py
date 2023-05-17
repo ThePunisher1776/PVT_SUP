@@ -223,8 +223,8 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.ladbible.com"
-    seleniumsselector_list = ["refresh_sens:partial link text;Categories","relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://wikihow.com"
+    seleniumsselector_list = ["id;nav_profile","relies_prev:id;fb_login_head"]#"relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://ladbible.com")
