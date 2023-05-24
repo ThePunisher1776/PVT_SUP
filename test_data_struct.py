@@ -152,9 +152,20 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
         element = driver.find_element(type_find, css)
         return element
 
+def check_substring(lst:list, substring):
+    if lst == None:
+        return False, 1
+    for string in lst:
+        if substring in string:
+            ret_val = string[len(substring):]
+            return True, ret_val
+    return False, 1
+
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(5)
+    time.sleep(2)
+    #els = driver.find_elements("class name","menu-featured__item")
+    #els[2].click()
     #input()
     count = 0
     refresh_mem =[]
@@ -168,7 +179,7 @@ def test_ss_list(website_url:str, ss_list:list, driver):
             special_list = special.split["~"]
         except:
             try:
-                special_list = special
+                special_list = [special]
             except:
                 pass
         print(count)
@@ -176,10 +187,24 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         #input()
         print(type_find)
         if special_list: # specific indexed result
+            try:
+                scroll_present, scroll_val = check_substring(special_list, "scroll_")
+            except:
+                scroll_present = False
+                scroll_val = 0
+            try:
+                ind_present, ind_val = check_substring(special_list, "ind_")
+            except:
+                ind_present = False
+                ind_val = 0
             if "refresh_sens" in special_list:
                 refresh_mem.append((type_find, css))
             #if special[:3] == "ind_":
-            if "ind_" in special_list:
+            if scroll_present:
+                print(scroll_val)
+                scroll_pix = "window.scrollBy(0,"+scroll_val+")"
+                driver.execute_script(scroll_pix, "")
+            if ind_present:
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
@@ -189,7 +214,7 @@ def test_ss_list(website_url:str, ss_list:list, driver):
                         last_type_find, last_css = refresh_mem.pop()
                         elements = retry_3times_relies_prev_multiple(driver, website_url, last_type_find, last_css, type_find, css)
                     #elements = driver.find_elements(type_find, css)
-                ind = int(special.split("ind_"))
+                ind = int(ind_val)
                 print(ind)
                 element = elements[ind]
             if "rand_ind" in special_list: #randomly index result
@@ -226,8 +251,8 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.w3schools.com/"
-    seleniumsselector_list = ["id;navbtn_tutorials", "relies"]#"relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://www.9gag.com/"
+    seleniumsselector_list = ["class name;menu","relies_prev~ind_1:class name;drawer-menu-item__icon"]#relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://ladbible.com")
