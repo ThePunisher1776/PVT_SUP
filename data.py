@@ -261,14 +261,61 @@ WEBSITE_LIST = [{"https://www.youtube.com/":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "game":'rand_ind:css selector;.card-app__img',
-                  "interests":''
+                  "top-tabs":'rand_ind:css selector;.home-tab-bar__tab',
+                  "top-nav":'rand_ind:css selector;.nav-menu .secondary',
+                  "memes":'rand_ind:css selector;section#list-view-2 h1, section#list-view-2 h2, section#list-view-2 h3',
+                  "comments":'rand_ind:css selector;comment.badge-evt'
                  },
                   "sub-endpoints":
                   {
-                      "apps":{"app":'relies_prev~rand_ind:class name;app-info__name'},
-                      "games":{"game":'relies_prev~randd:css selector;.card-game__cover'},
-                      "news":{"article":'rand_ind:css selector;.card-article__link'}
+                      "memes":{"comments":'rand_ind:css selector;comment.badge-evt'},
+                      "top-nav":{"comments":'rand_ind:css selector;comment.badge-evt'},
+                      "top-tabs":{"comments":'rand_ind:css selector;comment.badge-evt'}
+                  }
+                 }
+                },
+                {"https://www.bankofamerica.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "checking":'id;navChecking',
+                  "savings":'id;navSavings',
+                  "credit-cards":'id;navCreditCards',
+                  "home-loans":'id;navHomeLoans',
+                  "auto-loans":'id;navAutoLoans',
+                  "products":'rand_ind:class name;product'
+                 },
+                  "sub-endpoints":
+                  {
+                      "checking":{"explore-checking-solutions":'relies_prev:id;exploreCheckingSolutions',
+                                  "advantage-banking":'relies_prev:id;advantageBanking',
+                                  "student-banking":'relies_prev:id;studentBanking'},
+                      "savings":{"boa-advantage-savings":'relies_prev:id;rewardsSavingsAccount',
+                                 "cds":'relies_prev:id;cdAccount',
+                                 "iras":'relies_prev:id;iraAccount'},
+                      "credit-cards":{"shop-cards":'relies_prev:id;btnCompareCreditCards',
+                                      "cash-back":'relies_prev:id;cashRewardsCards',
+                                      "lower-interest":'relies_prev:id;travelRewardsCards'},
+                      "home-loans":{"mortgage":'relies_prev:id;mortgage',
+                                    "refinance":'relies_prev:id;refinance',
+                                    "home-equity":'relies_prev:id;homeEquity'}
+                  }
+                 }
+                },
+                {"https://www.gfycat.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                    "any-gif":'rand_ind:css selector;.media-container .media',
+                    "trending":'partial link text;Trending',
+                    "popular":'partial link text;Popular'
+                 },
+                  "sub-endpoints":
+                  {
+                      "trending":{"any-gif":'rand_ind:css selector;.media-container .media'},
+                      "popular":{"any-gif":'rand_ind:css selector;.media-container .media'},
+                      "any-gif":{"tag-list":'relies_prev~rand_ind:css selector;.tag-list*',
+                                 "up-next":'relies_prev~rand_ind:css selector;.upnext-horizontal .upnext-item img'}
                   }
                  }
                 }

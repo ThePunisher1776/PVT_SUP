@@ -164,8 +164,8 @@ def check_substring(lst:list, substring):
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
     time.sleep(2)
-    #els = driver.find_elements("class name","menu-featured__item")
-    #els[2].click()
+    #els = driver.find_elements("class name","drawer-menu-item__title")
+    #els[1].click()
     #input()
     count = 0
     refresh_mem =[]
@@ -251,8 +251,8 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.9gag.com/"
-    seleniumsselector_list = ["class name;menu","relies_prev~ind_1:class name;drawer-menu-item__icon"]#relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://www.gfycat.com/"
+    seleniumsselector_list = [""]#relies_prev:direct-link;originals", "rand_ind:css selector;contentWrapper"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://ladbible.com")
