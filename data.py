@@ -25,298 +25,162 @@ WEBSITE_LIST = [{"https://www.youtube.com/":
                   }
                  }
                 }, 
-                {"https://www.ladbible.com":
-                {"specifics":"ablock=true;",
-                 "main_menu":'refresh_sens:class name;css-20as6p',
-                 "endpoints":
-                 { 
-                  "news":'id;HeaderLink-news',
-                  "entertainment": 'id;HeaderLink-entertainment',
-                  "article": 'rand_ind:class name;contentWrapper'
-                 },
-                  "sub-endpoints":
-                  {
-                      "categories":{"news":'relies_prev:direct-link;news',
-                                    "entertainment":'relies_prev:direct-link;entertainment',
-                                    "lad_originals":'relies_prev:direct-link;originals'
-                                    },
-                      "news":{"article":"rand_ind:class name;contentWrapper"},
-                      "entertainment":{"show":"rand_ind:class name;contentWrapper"},
-                      "lad_originals":{"article":"rand_ind:class name;contentWrapper"}
-                  }
-                 }
-                },
-
-                {"https://www.wikihow.com/":
-                {"specifics":"ablock=true;",
-                 "endpoints":
-                 {
-                  "login-page":   'id;nav_profile',
-                  "help-us":  'id;nav_help',
-                  "explore": 'id;nav_explore',
-                  "random": 'id;nav_random_li',
-                  "article": 'rand_ind:class name;hp_thumb' 
-                 },
-                  "sub-endpoints":
-                  {
-                      "explore":{"coupons":'relies_prev:partial link text;Coupons',
-                                    "tech_help_pro":'relies_prev:partial link text;Tech Help Pro',
-                                    "random_article":'relies_prev:partial link text;Random Article',
-                                    "about_us":'relies_prev:partial link text;About Us',
-                                    "quizzes":'relies_prev:partial link text;Quizzes',
-                                    "contribute":'relies_prev:partial link text;Contribute',
-                                    "train_your_brain":'relies_prev:partial link text;Train Your Brain Game',
-                                    "improve_your_english":'relies_prev:partial link text;Improve Your English',
-                                    "popular_categories":'relies_prev:partial link text;Popular Categories',
-                                    "arts_and_entertainment":'relies_prev:partial link text;Arts and Entertainment',
-                                    },
-                      "help_us":{"support_wikiHow":'relies_prev:partial link text;Support wikiHow',
-                                 "community_dashboard":'relies_prev:partial link text;Community Dashboard',
-                                 "write_an_article":'relies_prev:partial link text;Write an Article',
-                                 "request_a_new_article":'relies_prev:partial link text;Request a New Article',
-                                 "more_ideas":'relies_prev:partial link text;More Ideas...'
-                                 },
-                      "login_page":{"facebook":'relies_prev:partial link text;Facebook',
-                                    "google":'relies_prev:partial link text;Google'
-                                    }
-                  }
-                 }
-                },
-                {"https://www.yelp.com":
+                {"https://www.playstation.com":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "login-page":   'partial link text;Log In',
-                  "sign-up": 'partial link text;Sign Up',
-                  "restaurants": 'partial link text;Restaurants',
-                  "home-services": 'partial link text;Home Services',
-                  "auto-services": 'partial link text; Auto Services',
-                  "more": 'partial link text;More',
-                  "yelp-for-business":'partial link text;Yelp for Business',
-                  "article":  'rand_ind:class name;css-vzslx5'
+                     "hardware-games":'rand_ind:css selector;.gdk .featured-hardware .slider__controls .slider__control figcaption',
+                     "hardware":'refresh_sens:id;menu-button-primary--msg-hardware',
+                     "games":'refresh_sens:id;menu-button-primary--msg-hardware',
+                     "services":'refresh_sens:id;menu-button-primary--msg-hardware',
+                     "news":'refresh_sens:id;menu-button-primary--msg-hardware',
+                     "shop":'refresh_sens:id;menu-button-primary--msg-hardware',
+                     "support":'refresh_sens:id;menu-button-primary--msg-support'
                  },
                   "sub-endpoints":
                   {
-                      "restaurants":{"delivery":'relies_prev:partial link text;Delivery',
-                                     "burgers":'relies_prev:partial link text;Burgers',
-                                     "chinese":'relies_prev:partial link text;Chinese',
-                                     "italian":'relies_prev:partial link text;Italian',
-                                     "reservations":'relies_prev:partial link text;Reservations',
-                                     "japanese":'relies_prev:partial link text;Japanese',
-                                     "thai":'relies_prev:partial link text;Thai',
-                                     "mexican":'relies_prev:partial link text;Mexican'
-                                     },
-                      "home-services":{"contractors":'relies_prev:partial link text;Contractors',
-                                       "electricians":'relies_prev:partial link text;Electricians',
-                                       "home-cleaners":'relies_prev:partial link text;Home Cleaners',
-                                       "hvac":'relies_prev:partial link text;HVAC',
-                                       "landscaping":'relies_prev:partial link text;Landscaping',
-                                       },
-                      "auto-services":{"auto-repair":'relies_prev:partial link text;Auto Repair',
-                                       "auto-detailing":'relies_prev:partial link text;Auto Detailing',
-                                       "body-shops":'relies_prev:partial link text;Body Shops',
-                                       "car-wash":'relies_prev:partial link text;Car Wash',
-                                       "car-dealers":'relies_prev:partial link text;Car Dealers'
-                                       },
-                      "more":{"dry-cleaning":'relies_prev:partial link text;',
-                              "phone-repair":'relies_prev:partial link text;',
-                              "bars":'relies_prev:partial link text;',
-                              "nightlife":'relies_prev:partial link text;',
-                              "hair-salons":'relies_prev:partial link text;'
-                              },
-                      "yelp-for-business":{"add-a-business":'relies_prev:partial link text;Add a Business',
-                                           "claim-your-business":'relies_prev:partial link text;Claim your business',
-                                           "log-in-to-business-account":'relies_prev:partial link text;Log in to Business Account',
-                                           "explore-yelp-for-business":'relies_prev:partial link text;Explore Yelp for Business'
-                                           }
+                      "games":{"ps5":'link-secondary--msg-ps5',
+                               "ps4":'link-secondary--msg-ps5',
+                               "ps-vr2":'link-secondary--msg-ps5',
+                               "ps-plus":'link-secondary--msg-ps5',
+                               "buy-games":'link-secondary--msg-ps5',
+                               }
                   }
                  }
                 },
-                {"https://www.w3schools.com":
+                {"https://www.square-enix-games.com/en_US/home":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "tutorials":'id;navbtn_tutorials',
-                  "references":'id;navbtn_references',
-                  "exercises":'id;navbtn_exercises',
-                  "login":'id;w3loginbtn',
-                  "sign-up":'id;signupbtn_topnav',
-                  "get-certified":'id;cert_navbtn',
-                  "bootcamps":'partial link text;Bootcamp',
-                  "learn-randomizer":'rand_ind:partial link text;Learn'
+                     "store":'partial link text;STORE',
+                     "more":'partial link text;MORE',
+                     "support":'partial link text;SUPPORT',
+                     "games":'id;topgames-button'
                  },
                   "sub-endpoints":
                   {
-                      "tutorials":{"learn-html":'relies_prev:partial link text;Learn HTML',
-                                   "learn-javascript":'relies_prev:partial link text;Learn JavaScript',
-                                   "learn-sql:":'relies_prev:partial link text;Learn SQL',
-                                   "learn-ai":'relies_prev:partial link text;Learn AI',
-                                   "learn-python":'relies_prev:partial link text;Learn Python'
-                                   },
-                       "references":{"html-tag-reference":'relies_prev:partial link text;HTML Tag Reference',
-                                     "javascript-reference":'relies_prev:partial link text;JavaScript Reference',
-                                     "sql-reference":'relies_prev:partial link text;SQL Reference',
-                                     "python-reference":'relies_prev:partial link text;Python Reference',
-                                     "css-selector-reference":'relies_prev:partial link text;CSS Selector Reference',
-                                     },
-                       "exercises":{"html-exercises":'relies_prev:partial link text;HTML Exercises',
-                                    "pandas-exercises":'relies_prev:partial link text;Pandas Exercises',
-                                    "kotlin-exercises":'relies_prev:partial link text;Kotlin Exercises',
-                                    "typescript-exercises":'relies_prev:partial link text;TypeScript Exercises',
-                                    "excel-exercises":'relies_prev:partial link text;Excel Exercises'
-                                    }
+                      "store":{"games":'rand_ind~relies_prev:class name;card-img-container'},
+                      "support":{"articles":'rand_ind~relies_prev:css selector;.b',
+                                 "articles2":'rand_ind~relies_prev:css selector;fieldset, img, abbr'},
+                      "games":{"games":'relies_prev:partial link text;VIEW MORE'}
                   }
                  }
                 },
-                {"https://www.washingtonpost.com/":
+                {"vmware.com":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "login-page":   'partial link text;Sign in',
-                  "subscribe":  'partial link text;Subscribe',
-                  "politics":'partial link text;Politics',
-                  "opinions":'partial link text;Opinions',
-                  "investigations":'partial link text;Investigations',
-                  "climate":'partial link text;Climate'
+                     "multi-cloud-services":'ind_0:css selector;.menu-item li',
+                     "products":'ind_1:css selector;.menu-item li',
+                     "solutions":'ind_2:css selector;.menu-item li',
+                     "partners":'ind_3:css selector;.menu-item li',
+                     "resources":'ind_4:css selector;.menu-item li'
                  },
                   "sub-endpoints":
                   {
-                      "investigations":{"article":'rand_ind~relies_prev:css selector;.gray-darkest'},
-                      "politics":{"article":'rand_ind~relies_prev:css selector;.gray-darkest'},
-                      "opinions":{"article":'rand_ind~relies_prev:css selector;.gray-darkest'},                      "investigations":{"article":'relies-prev~relies_prev:css selector;.gray-darkest'},                      "investigations":{"article":'relies-prev~relies_prev:css selector;.gray-darkest'},                      
-                      "climate":{"article":'rand_ind~relies_prev:css selector;.gray-darkest'}
+                      "resources":{"relies_prev:partial link text;Blogs",
+                                   "relies_prev:partial link text;Podcasts",
+                                   "relies_prev:partial link text;Communities",
+                                   "relies_prev:partial link text;Customer Stories",
+                                   "relies_prev:partial link text;SprineOne",
+                                   "relies_prev:partial link text;Cloud Marketplace"},
+                      "partners":{"relies_prev:partial link text;Become a Cloud Provider",
+                                  "relies_prev:partial link text;Cloud Partner Navigator",
+                                  "relies_prev:partial link text;Get Cloud Verified",
+                                  "relies_prev:partial link text;Partner Connect Login",
+                                  "relies_prev:partial link text;Work with VMware"},
+                      "solutions":{"relies_prev:partial link text;Communications Service Providers",
+                                   "relies_prev:partial link text;Federal Government",
+                                   "relies_prev:partial link text;Financial Services",
+                                   "relies_prev:partial link text;Healthcare Providers"}
                   }
                  }
                 },
-                {"https://www.godaddy.com/":
+                {"nationalgeographic.com":
                 {"specifics":"ablock=true;",
-                 "main-menu":'refresh_sens:css selector;.pqzxpf0',
                  "endpoints":
                  { 
-                  "login-page":   'css selector;.auov0ko',
-                  "priced-service-rand":'rand_ind:css selector;.g142dare',
-                  "domain-names":'relies_prev:css selector;#id-b523f8c3-cc8f-436b-a8af-3f0821e411b3 > div.f1aylcmx > div.ptfv6gx > ul > li:nth-child(1) > button',
-                  "websites-and-hosting":'relies_prev:css selector;#id-b523f8c3-cc8f-436b-a8af-3f0821e411b3 > div.f1aylcmx > div.ptfv6gx > ul > li:nth-child(2) > button',
-                  "email-and-marketing":'relies_prev:css selector;#id-b523f8c3-cc8f-436b-a8af-3f0821e411b3 > div.f1aylcmx > div.ptfv6gx > ul > li:nth-child(3) > button',
-                  "hire-an-expert":'relies_prev:css selector;#id-b523f8c3-cc8f-436b-a8af-3f0821e411b3 > div.f1aylcmx > div.ptfv6gx > ul > li:nth-child(4) > button'     
+                     "article":'rand_ind:css selector;.ListItem__Link',
+                     "login": 'ind_0:class name;NavBar__List--item',
+                     "newsletters":'ind_2:class name;NavBar__List--item',
+                     "subscribe": 'ind_3:class name;NavBar__List--item',
+                     "menu":'ind_4:class name;NavBar__List--item',
+                     "latest-stories":'rand_ind:css selector;.HomepagePromos__row'
                  },
                   "sub-endpoints":
                   {
-                      "domain-names":{"search-for-domain-names":'relies_prev:partial link text;Search for Domain Names',
-                                      "domain-broker-service":'relies_prev:partial link text;Domain Broker Services',
-                                      "auctions-for-domain-names":'relies_prev:partial link text;Auctions for Domain Names',
-                                      "domain-value-appraisal":'relies_prev:partial link text;Domain Value Appraisal',
-                                      "save-with-bundles":'relies_prev:partial link text;Save with Bundles',
-                                      },
-                      "websites-and-hosting":{"website-builder":'relies_prev:partial link text;Website Builder',
-                                              "web-hosting":'relies_prev:partial link text;Web Hosting',
-                                              "website-security":'relies_prev:partial link text;Website Security',
-                                              "online-store":'relies_prev:partial link text;Online Store',
-                                              "back-up-your-website":'relies_prev:partial link text;Back Up Your Website',
-                                              },
-
-                      "email-and-marketing":{"email-and-microsoft":'relies_prev:partial link text;Email & Microsoft 365',
-                                             "digital-marketing-suite":'relies_prev:partial link text;Digital Marketing Suite',
-                                             "content-and-photo-creator":'relies_prev:partial link text;Content & Photo Creator'
-                                             },
-                      "hire-an-expert":{"website-design-services":'relies_prev:partial link text;Website Design Services',
-                                        "digital-marketing-services":'relies_prev:partial link text;Digital Marketing Services'
-                                        }
+                      "newsletters":{"article":'relies_prev~rand_ind:class name;CheckCard__Link'},
+                      "menu":{"topics":'relies_prev~rand_ind:css selector;.MenuModal__Content__List__Item--primarylink, .MenuModal__Content__List__Item--primarylink:focus, .MenuModal__Content__List__Item--primarylink:hover, .MenuModal__Content__List__Item--secondarylink:focus, .MenuModal__Content__List__Item--secondarylink:hover',
+                              "sites":'relies_prev~rand_ind:css selector.MenuModal__Content__List__Item--secondarylink'}
                   }
                  }
                 },
-                {"https://www.etsy.com/":
+                {"foodnetwork.ca":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "login-page":   'css selector;#gnav-header-inner > div.wt-flex-shrink-xs-0 > nav > ul > li:nth-child(1) > button',
-                  "popular-gifts":'rand_ind:css selector;.popular-right-now',
-                  "shop-our-selections-and-fresh-from-blog":'rand_ind:css selector;.wt-card a.wt-card__link',
-                  "top-nav-random":'rand_ind:css selector;.cat-nav .top-nav-item'
+                     "recipes":'ind_0:class name;nav-link',
+                     "chefs-hosts":'ind_1:class name;nav-link',
+                     "shows":'ind_2:class name;nav-link',
+                     "where-to-watch":'ind_3:class name;nav-link',
+                     "articles":'rand_ind:css selector;.post-block__title a'
                  },
                   "sub-endpoints":
                   {
-                      "top-nav-articles":{"articles":'relies_prev~rand_ind:css selector;.v2-listing-card__img'}
+                     "recipes":{"recipe":'relies_prev~rand_ind:class name;post-block__title'},
+                     "chefs-hosts":{"host":'ind_1:css selector;.chefs-hosts__grid__item, .shows__grid__item'},
+                     "shows":{"show":'relies_prev~rand_ind:class name;shows__grid__item'},
+                     "where-to-watch":{"channels":'relies_prev~rand_ind:css selector;.where-to-watch .where-to-watch__channel_single .channel-logo img'}
                   }
                  }
                 },
-                {"https://www.softonic.com/":
+                {"informer.com":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "game":'rand_ind:css selector;.card-app__img',
-                  "apps":'ind_0:class name;menu-featured__item',
-                  "games":'ind_1:class name;menu-featured__item',
-                  "news":'ind_2:class name;menu-featured__item'
+                     "blog":'partial link text;Blog',
+                     "about":'partial link text;About',
+                     "contacts":'partial link text;Contacts',
+                     "dmca":'partial link text;DMCA',
+                     "projects":'rand_ind:css selector;.items_wrapper .item'
                  },
                   "sub-endpoints":
                   {
-                      "apps":{"app":'relies_prev~rand_ind:class name;app-info__name'},
-                      "games":{"game":'relies_prev~randd:css selector;.card-game__cover'},
-                      "news":{"article":'rand_ind:css selector;.card-article__link'}
+                      "blog":{"articles":"relies_prev~rand_ind:css selector;.news a",
+                              "types":'relies_prev~rand_ind:css selector;.items_wrapper .item'}
                   }
                  }
                 },
-                {"https://www.9gag.com/":
+                {"malwarebytes.com":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
-                  "top-tabs":'rand_ind:css selector;.home-tab-bar__tab',
-                  "top-nav":'rand_ind:css selector;.nav-menu .secondary',
-                  "memes":'rand_ind:css selector;section#list-view-2 h1, section#list-view-2 h2, section#list-view-2 h3',
-                  "comments":'rand_ind:css selector;comment.badge-evt'
+                     "personal":'ind_0:css selector;#mbnav.mainnav .navitem .navitem-btn',
+                     "business":'ind_1:css selector;#mbnav.mainnav .navitem .navitem-btn',
+                     "pricing":'ind_2:css selector;#mbnav.mainnav .navitem .navitem-btn',
+                     "partners":'ind_3:css selector;#mbnav.mainnav .navitem .navitem-btn',
+                     "resources":'ind_4:css selector;#mbnav.mainnav .navitem .navitem-btn',
+                     "support":'ind_5:css selector;#mbnav.mainnav .navitem .navitem-btn',
                  },
                   "sub-endpoints":
                   {
-                      "memes":{"comments":'rand_ind:css selector;comment.badge-evt'},
-                      "top-nav":{"comments":'rand_ind:css selector;comment.badge-evt'},
-                      "top-tabs":{"comments":'rand_ind:css selector;comment.badge-evt'}
-                  }
-                 }
-                },
-                {"https://www.bankofamerica.com/":
-                {"specifics":"ablock=true;",
-                 "endpoints":
-                 { 
-                  "checking":'id;navChecking',
-                  "savings":'id;navSavings',
-                  "credit-cards":'id;navCreditCards',
-                  "home-loans":'id;navHomeLoans',
-                  "auto-loans":'id;navAutoLoans',
-                  "products":'rand_ind:class name;product'
-                 },
-                  "sub-endpoints":
-                  {
-                      "checking":{"explore-checking-solutions":'relies_prev:id;exploreCheckingSolutions',
-                                  "advantage-banking":'relies_prev:id;advantageBanking',
-                                  "student-banking":'relies_prev:id;studentBanking'},
-                      "savings":{"boa-advantage-savings":'relies_prev:id;rewardsSavingsAccount',
-                                 "cds":'relies_prev:id;cdAccount',
-                                 "iras":'relies_prev:id;iraAccount'},
-                      "credit-cards":{"shop-cards":'relies_prev:id;btnCompareCreditCards',
-                                      "cash-back":'relies_prev:id;cashRewardsCards',
-                                      "lower-interest":'relies_prev:id;travelRewardsCards'},
-                      "home-loans":{"mortgage":'relies_prev:id;mortgage',
-                                    "refinance":'relies_prev:id;refinance',
-                                    "home-equity":'relies_prev:id;homeEquity'}
-                  }
-                 }
-                },
-                {"https://www.gfycat.com/":
-                {"specifics":"ablock=true;",
-                 "endpoints":
-                 { 
-                    "any-gif":'rand_ind:css selector;.media-container .media',
-                    "trending":'partial link text;Trending',
-                    "popular":'partial link text;Popular'
-                 },
-                  "sub-endpoints":
-                  {
-                      "trending":{"any-gif":'rand_ind:css selector;.media-container .media'},
-                      "popular":{"any-gif":'rand_ind:css selector;.media-container .media'},
-                      "any-gif":{"tag-list":'relies_prev~rand_ind:css selector;.tag-list*',
-                                 "up-next":'relies_prev~rand_ind:css selector;.upnext-horizontal .upnext-item img'}
+                      "personal":{"android":'relies_prev:direct-link;android',
+                                  "mac":'relies_prev:direct-link;mac',
+                                  "chromebook":'relies_prev:direct-link;chromebook',
+                                  "ios":'relies_prev:direct-link;ios',
+                                  "teams":'relies_prev:direct-link;teams'},
+                      "business":{"eps":'relies_prev:partial link text;Endpoint Protection for Servers',
+                                  "edrs":'relies_prev:partial link text;Endpoint Detection & Response for Servers',
+                                  "ir":'relies_prev:partial link text;Incident Response',
+                                  "npa":'relies_prev:partial link text;Nebula Platform Architecture'},
+                      "pricing":{"business":'relies_prev:direct-link;business/pricing',
+                                 "small-office":'relies_prev:direct-link;pricing/teams',
+                                 "personal":'relies_prev:direct-link;pricing'},
+                      "partners":{"resellers":'relies_prev:partial link text;Resellers',
+                                  "managed-service-providers":'relies_prev:partial link text;Managed Service Providers',
+                                  "pc-repair":'relies_prev:partial link text;Computer Repair',
+                                  "tech-repairs":'relies_prev:partial link text;Technology Repairs'}
                   }
                  }
                 }
-                ]
+]
